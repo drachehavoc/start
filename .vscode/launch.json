@@ -1,1 +1,27 @@
-
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch Main TS",
+            "cwd": "${workspaceFolder}",
+            "args": ["source/main.ts"],
+            "runtimeArgs": ["-r", "ts-node/register"],
+            // "console": "externalTerminal",
+            // "console": "integratedTerminal",
+            "internalConsoleOptions": "openOnSessionStart"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch Current TS File",
+            "cwd": "${workspaceFolder}",
+            "args": ["${relativeFile}"],
+            "runtimeArgs": ["-r", "ts-node/register"],
+            // "console": "externalTerminal",
+            // "console": "integratedTerminal",
+            "internalConsoleOptions": "openOnSessionStart"
+        },
+    ]
+}
